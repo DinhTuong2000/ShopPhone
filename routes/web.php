@@ -15,6 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('active/{token}', 'Auth\RegisterController@activation')->name('active_account');
-Route::namespace('Pages')->group(function () {
-    Route::get('/', 'HomePage')->name('home_page');
-});
+

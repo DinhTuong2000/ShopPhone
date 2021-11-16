@@ -2,12 +2,12 @@
 
 @section('title', 'Đăng Nhập')
 
-@section('content')
+
 
    <section class="bread-crumb">
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('home_page') }}">{{ __('header.Home') }}</a></li>
+
                 <li class="breadcrumb-item active" aria-current="page">{{ __('header.Login') }}</li>
             </ol>
         </nav>
@@ -80,7 +80,7 @@
             Chưa có tài khoản? <a href="{{ route('register') }}">Đăng kí ngay</a>
         </div>
     </div>
-@endsection
+
 
 
 @section('js')
