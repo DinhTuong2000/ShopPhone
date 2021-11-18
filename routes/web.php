@@ -15,4 +15,4 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 Route::get('active/{token}', 'Auth\RegisterController@activation')->name('active_account');
-
+Route::get('/home', 'App\Http\Controllers\Pages\HomePage')->name('home_page');

@@ -53,3 +53,4 @@ class HomePage extends Controller
         return view('pages.home')->with('data',['products' => $products, 'favorite_products'=>$favorite_products, 'posts'=> $posts, 'advertises' => $advertises, 'producers' => $producers]);
     }
 }
+
