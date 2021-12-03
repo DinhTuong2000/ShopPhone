@@ -1,99 +1,116 @@
-@extends('layouts.master')
+<?php
 
-@section('title', 'Đăng Nhập')
+namespace App\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
 
+class LoginController extends Controller
+{
+    /*
+    |--------------------------------------------------------------------------
+    | Login Controller
+    |--------------------------------------------------------------------------
+    |
+    | This controller handles authenticating users for the application and
+    | redirecting them to your home screen. The controller uses a trait
+    | to conveniently provide its functionality to your applications.
+    |
+    */
 
-   <section class="bread-crumb">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
+    use AuthenticatesUsers;
 
-                <li class="breadcrumb-item active" aria-current="page">{{ __('header.Login') }}</li>
-            </ol>
-        </nav>
-    </section>
+    /**
+     * Where to redirect users after login.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/';
 
-    <div class="site-login">
-        <div class="login-body">
-            <h2 class="title">Đăng Nhập</h2>
-            <form action="{{ route('login') }}" method="POST" accept-charset="utf-8">
-                @csrf
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
 
-                @if(session('message'))
-                    <div class="form_message">
-                        {{ session('message') }}
-                    </div>
-                @endif
+    /**
+     * Validate the user login request.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return void
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function validateLogin(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|string|min:8',
+        ]);
+    }
 
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fas fa-user"></i></span>
-                    <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+    /**
+     * The user has been authenticated.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  mixed  $user
+     * @return mixed
+     */
+    protected function authenticated(Request $request, $user)
+    {
+        if(!$user->active) {
+            Auth::logout();
+            return back()->withInput()->with(['alert' => [
+                'type' => 'warning',
+                'title' => 'Tài khoản chưa được kích hoạt!',
+                'content' => 'Hãy kiểm tra email để kích hoạt tài khoản.'
+            ]]);
+        } else if($user->admin) {
+            return redirect()->route('admin.dashboard')->with(['alert' => [
+                'type' => 'success',
+                'title' => 'Đăng nhập thành công',
+                'content' => 'Chào mừng bạn đến với trang quản trị Website Đại Châu'
+            ]]);
+        } else {
+            return redirect()->route('home_page')->with(['alert' => [
+                'type' => 'success',
+                'title' => 'Đăng nhập thành công',
+                'content' => 'Chào mừng bạn đến với Website Đại Châu của chúng tôi'
+            ]]);
+        }
+    }
 
-                    @error('email')
-                    <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-              </span>
-                    @enderror
-                </div>
+    /**
+     * Get the failed login response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Symfony\Component\HttpFoundation\Response
+     *
+     * @throws \Illuminate\Validation\ValidationException
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        return redirect()->back()->withInput()->with('message', trans('auth.failed'));
+    }
 
-                <div class="input-group">
-                    <span class="input-group-addon"><i class="fas fa-lock"></i></span>
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" placeholder="Mật khẩu" required autocomplete="current-password">
-
-                    @error('password')
-                    <span class="invalid-feedback" role="alert">
-                <strong>{{ $message }}</strong>
-              </span>
-                    @enderror
-                </div>
-
-                <div class="login-form-group">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="checkbox">
-                                <label><input name="remember" type="checkbox" {{ old('remember') ? 'checked' : '' }}>Remember me</label>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="forgot-password">
-                                <a href="{{ route('password.request') }}" title="Forgot password">Quên mật khẩu</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-default">Đăng nhập</button>
-            </form>
-        </div>
-        <div class="login-social">
-            <div class="login-social-text">Đăng nhập bằng</div>
-            <div class="row">
-                <div class="col-md-6">
-                    <a href="#" title="Facebook" class="btn btn-defaule"><i class="fab fa-facebook-square"></i> Facebook</a>
-                </div>
-                <div class="col-md-6">
-                    <a href="#" title="Google" class="btn btn-defaule"><i class="fab fa-google"></i> Google</a>
-                </div>
-            </div>
-        </div>
-        <div class="sign-up-now">
-            Chưa có tài khoản? <a href="{{ route('register') }}">Đăng kí ngay</a>
-        </div>
-    </div>
-
-
-
-@section('js')
-    <script>
-        $(document).ready(function(){
-            @if(session('alert'))
-            Swal.fire(
-                "{{ session('alert')['title'] }}",
-                "{{ session('alert')['content'] }}",
-                "{{ session('alert')['type'] }}"
-            )
-            @endif
-        });
-    </script>
-@endsection
-
+    /**
+     * The user has logged out of the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return mixed
+     */
+    protected function loggedOut(Request $request)
+    {
+        return redirect()->route('home_page')->with(['alert' => [
+            'type' => 'success',
+            'title' => 'Đăng xuất thành công',
+            'content' => 'Chúc bạn một ngày vui vẻ.'
+        ]]);
+    }
+}
