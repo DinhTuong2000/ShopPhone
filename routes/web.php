@@ -25,3 +25,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->middleware('admin')
     ->group(function() {
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
     });
+
+Route::namespace('Pages')->group(function () {
+    Route::get('/', 'HomePage')->name('home_page');
+    Route::get('about', 'AboutPage')->name('about_page');
+    Route::get('contact', 'ContactPage')->name('contact_page');
+});
