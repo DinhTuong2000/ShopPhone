@@ -21,13 +21,5 @@ class UsersTableSeeder extends Seeder
             'created_at'    =>  date('Y-m-d H:i:s', strtotime('now')),
             'updated_at'    =>  date('Y-m-d H:i:s', strtotime('now')),
         ]);
-        DB::table('users')->insert([
-            'name' => 'user',
-            'email' =>  'user@gmail.com',
-            'active'    =>  1,
-            'password'  =>  bcrypt('12345678'),
-            'created_at'    =>  date('Y-m-d H:i:s', strtotime('now')),
-            'updated_at'    =>  date('Y-m-d H:i:s', strtotime('now')),
-        ]);
     }
 }
