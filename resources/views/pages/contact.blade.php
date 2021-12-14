@@ -32,7 +32,7 @@
         <div class="row">
           <div class="col-md-9">
             <div class="content-left">
-            <div style="width: 100%"><iframe width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=+(CTY%20INOX%20%C4%90%E1%BA%A0I%20CH%C3%82U%20S%E1%BA%A2N%20XU%E1%BA%A4T%20XE%20N%C6%AF%E1%BB%9AC%20M%C3%8DA)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="#">ĐẠI CHÂU</a></div>
+            <div style="width: 100%"><iframe width="600" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="#">Phone Store</a></div>
             </div>
           </div>
           <div class="col-md-3">
@@ -42,7 +42,7 @@
                 <img src="{{ asset('images/support_online.jpg') }}">
                 <h3 class="sub_title">Để được hỗ trợ tốt nhất. Hãy gọi</h3>
                 <div class="phone">
-                  <a href="tel:0979396926" title="0979396926">0979396926</a>
+                  <a href="tel:0979396926" title="0979396926">0326663040</a>
                 </div>
                 <div class="or"><span>HOẶC</span></div>
                 <h3 class="title">Chat hỗ trợ trực tuyến</h3>

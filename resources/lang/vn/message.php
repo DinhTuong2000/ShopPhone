@@ -1,5 +1,5 @@
 <?php
 
   return [
-    'welcome'       =>      'Đại Châu kính chào quý khách!',
+    'welcome'       =>      'PhoneStore kính chào quý khách!',
   ];
