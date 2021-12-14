@@ -85,20 +85,20 @@
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <label for="productivity">Năng suất <span class="text-red">*</span></label>
-                <input type="text" name="productivity" class="form-control" id="productivity" placeholder="Năng suất" required autocomplete="off">
+                <label for="productivity">Màn Hình <span class="text-red">*</span></label>
+                <input type="text" name="productivity" class="form-control" id="productivity" placeholder="Màn Hình" required autocomplete="off">
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <label for="vol">Điện áp <span class="text-red">*</span></label>
-                <input type="text" name="vol" class="form-control" id="vol" placeholder="Điện áp" required autocomplete="off">
+                <label for="vol">Hệ Điều Hành <span class="text-red">*</span></label>
+                <input type="text" name="vol" class="form-control" id="vol" placeholder="Hệ Điều Hành" required autocomplete="off">
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <label for="wat">Công suất <span class="text-red">*</span></label>
-                <input type="text" name="wat" class="form-control" id="wat" placeholder="Công suất" required autocomplete="off">
+                <label for="wat">Camera Sau, Trước <span class="text-red">*</span></label>
+                <input type="text" name="wat" class="form-control" id="wat" placeholder="Camera Sau, Trước" required autocomplete="off">
               </div>
             </div>
           </div>
@@ -108,48 +108,43 @@
                 <label>Model <span class="text-red">*</span></label>
                 <select class="form-control" name="model" required>
                   <option value="">-- Chọn model --</option>
-                  <option value="1">Dòng máy siêu sạch phổ thông chuyên dụng cho lượng khách trung bình khá như khách vãng lai, hàng xóm, chợ</option>
-                  <option value="2">Dòng máy ép mía siêu sạch cao cấp chuyên dụng cho lượng khách khá và tương đối đông khách như căn tin, trường học</option>
-                  <option value="3">Dòng máy ép mía siêu sạch công nghiệp siêu cấp chuyên dụng cho lượng khách như công ty, siêu thị, hội chợ, nhà hát</option>
-                  <option value="4">Dòng xe nước mía siêu sạch phổ thông dụng lượng khách trung bình khá như vãng lai, hàng xóm, chợ</option>
-                  <option value="5">Dòng xe nước mía siêu sạch cao cấp thông dụng lượng khánh khá và tương đối đông khách như trường học, căn tin</option>
-                  <option value="6">Dòng xe nước mía siêu sạch công nghiệp siêu cấp pro dành cho lượng khách công ty, siêu thị, hội chợ, nhà hát</option>
-                  <option value="7">Dòng xe nước mía siêu sạch nửa bàn và liền bàn không tủ kính từ phổ thông tới công nghiệp siêu cấp</option>
-                  <option value="8">Dòng xe tay quay truyền thống 2rulo nhôm dành cho kinh doanh giá rẻ dành cho khách hàng chuộng thức uống có tạo bọt</option>
-                  <option value="9">Dòng xe tay quay hiện đại siêu cấp bật nhất thị trường 2 rulo inox không bay màu rỉ sét theo thời gian</option>
+                  <option value="1">Dòng máy Iphone</option>
+                  <option value="2">Dòng máy Android Chơi game / Cấu hình cao </option>
+                  <option value="3">Dòng máy Android Note</option>
+                  <option value="4">Dòng máy Android Pin khủng trên 5000 mAh</option>
                 </select>
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <label for="bearings">Bạc đạn <span class="text-red">*</span></label>
-                <input type="text" name="bearings" class="form-control" id="bearings" placeholder="Bạc đạn" required autocomplete="off">
+                <label for="bearings">Chip <span class="text-red">*</span></label>
+                <input type="text" name="bearings" class="form-control" id="bearings" placeholder="Chip" required autocomplete="off">
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <label for="speed">Tốc độ quay <span class="text-red">*</span></label>
-                <input type="text" name="speed" class="form-control" id="speed" placeholder="Tốc độ quay" required autocomplete="off">
+                <label for="speed">RAM <span class="text-red">*</span></label>
+                <input type="text" name="speed" class="form-control" id="speed" placeholder="RAM" required autocomplete="off">
               </div>
             </div>
           </div>
           <div class="row">
             <div class="col-md-4">
               <div class="form-group">
-                <label for="weight">Trọng lượng <span class="text-red">*</span></label>
-                <input type="text" name="weight" class="form-control" id="weight" placeholder="Trọng lượng" required autocomplete="off">
+                <label for="weight">Bộ Nhớ Trong <span class="text-red">*</span></label>
+                <input type="text" name="weight" class="form-control" id="weight" placeholder="Bộ Nhớ Trong" required autocomplete="off">
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <label for="size">Kích thước <span class="text-red">*</span></label>
-                <input type="text" name="size" class="form-control" id="size" placeholder="Kích thước" required autocomplete="off">
+                <label for="size">SIM <span class="text-red">*</span></label>
+                <input type="text" name="size" class="form-control" id="size" placeholder="SIM" required autocomplete="off">
               </div>
             </div>
             <div class="col-md-4">
               <div class="form-group">
-                <label for="insurance">Bảo hành <span class="text-red">*</span></label>
-                <input type="text" name="insurance" class="form-control" id="insurance" placeholder="Bảo hành" required autocomplete="off">
+                <label for="insurance">Pin, Sạc <span class="text-red">*</span></label>
+                <input type="text" name="insurance" class="form-control" id="insurance" placeholder="Pin, Sạc" required autocomplete="off">
               </div>
             </div>
           </div>

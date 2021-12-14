@@ -109,15 +109,10 @@
                 <label>Mọi hình sử dụng<span class="text-red">*</span></label>
                 <select class="form-control" name="model" required>
                   <option value="">-- Chọn loại --</option>
-                  <option value="1" {{ $product->model == '1' ? 'selected' : '' }}>Dòng máy siêu sạch phổ thông chuyên dụng cho lượng khách trung bình khá như khách vãng lai, hàng xóm, chợ</option>
-                  <option value="2" {{ $product->model == '2' ? 'selected' : '' }}>Dòng máy ép mía siêu sạch cao cấp chuyên dụng cho lượng khách khá và tương đối đông khách như căn tin, trường học</option>
-                  <option value="3" {{ $product->model == '3' ? 'selected' : '' }}>Dòng máy ép mía siêu sạch công nghiệp siêu cấp chuyên dụng cho lượng khách như công ty, siêu thị, hội chợ, nhà hát</option>
-                  <option value="4" {{ $product->model == '4' ? 'selected' : '' }}>Dòng xe nước mía siêu sạch phổ thông dụng lượng khách trung bình khá như vãng lai, hàng xóm, chợ</option>
-                  <option value="5" {{ $product->model == '5' ? 'selected' : '' }}>Dòng xe nước mía siêu sạch cao cấp thông dụng lượng khánh khá và tương đối đông khách như trường học, căn tin</option>
-                  <option value="6" {{ $product->model == '6' ? 'selected' : '' }}>Dòng xe nước mía siêu sạch công nghiệp siêu cấp pro dành cho lượng khách công ty, siêu thị, hội chợ, nhà hát</option>
-                  <option value="7" {{ $product->model == '7' ? 'selected' : '' }}>Dòng xe nước mía siêu sạch nửa bàn và liền bàn không tủ kính từ phổ thông tới công nghiệp siêu cấp</option>
-                  <option value="8" {{ $product->model == '8' ? 'selected' : '' }}>Dòng xe tay quay truyền thống 2rulo nhôm dành cho kinh doanh giá rẻ dành cho khách hàng chuộng thức uống có tạo bọt</option>
-                  <option value="9" {{ $product->model == '9' ? 'selected' : '' }}>Dòng xe tay quay hiện đại siêu cấp bật nhất thị trường 2 rulo inox không bay màu rỉ sét theo thời gian</option>
+                  <option value="1" {{ $product->model == '1' ? 'selected' : '' }}>Dòng máy Iphone</option>
+                  <option value="2" {{ $product->model == '2' ? 'selected' : '' }}>Dòng máy Android Chơi game / Cấu hình cao</option>
+                  <option value="3" {{ $product->model == '3' ? 'selected' : '' }}>Dòng máy Android Note</option>
+                  <option value="4" {{ $product->model == '4' ? 'selected' : '' }}>Dòng máy Android Pin khủng trên 5000 mAh</option>
                 </select>
               </div>
             </div>
