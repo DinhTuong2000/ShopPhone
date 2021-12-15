@@ -14,11 +14,11 @@
 </section>
 
 <div class="site-about">
-  <section class="section-advertise">
-    <div class="content-advertise">
-      <div id="slide-advertise" class="owl-carousel">
+  <section class="section-advertise" >
+    <div class="content-advertise" >
+      <div id="slide-advertise" class="owl-carousel" style="height: 200px">
         @foreach($advertises as $advertise)
-        <div class="slide-advertise-inner" style="background-image: url('{{ Helper::get_image_advertise_url($advertise->image) }}');" data-dot="<button>{{ $advertise->title }}</button>"></div>
+        <div class="slide-advertise-inner" style="background-image: url('{{ Helper::get_image_advertise_url($advertise->image) }}');height: 200px" data-dot="<button>{{ $advertise->title }}</button>"></div>
         @endforeach
       </div>
     </div>
@@ -77,8 +77,8 @@
   #slide-advertise.owl-carousel .owl-item.active {
     -webkit-animation-name: zoomIn;
     animation-name: zoomIn;
-    -webkit-animation-duration: .6s;
-    animation-duration: .6s;
+    -webkit-animation-duration: .3s;
+    animation-duration: .3s;
   }
 </style>
 @endsection

@@ -16,9 +16,9 @@
 <div class="site-orders">
   <section class="section-advertise">
     <div class="content-advertise">
-      <div id="slide-advertise" class="owl-carousel">
+      <div id="slide-advertise" class="owl-carousel"style="height: 200px">
         @foreach($data['advertises'] as $advertise)
-        <div class="slide-advertise-inner" style="background-image: url('{{ Helper::get_image_advertise_url($advertise->image) }}');" data-dot="<button>{{ $advertise->title }}</button>"></div>
+        <div class="slide-advertise-inner" style="background-image: url('{{ Helper::get_image_advertise_url($advertise->image) }}');height: 200px" data-dot="<button>{{ $advertise->title }}</button>"></div>
         @endforeach
       </div>
     </div>
