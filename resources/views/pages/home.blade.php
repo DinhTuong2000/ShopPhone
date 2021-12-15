@@ -60,33 +60,7 @@
   </section>
   <section class="section-favorite-products">
     <div class="section-header">
-      <h2 class="section-title">SẢN PHẨM ƯA THÍCH</h2>
-    </div>
-    <div class="section-content">
-      <div id="slide-favorite" class="owl-carousel">
-        @foreach($data['favorite_products'] as $product)
-        <div class="item-product">
-          <a href="{{ route('product_page', ['id' => $product->id]) }}" title="{{ $product->name }}">
-            <div class="image-product" style="background-image: url('{{ Helper::get_image_product_url($product->image) }}');padding-top: 100%;">
-              {!! Helper::get_promotion_percent($product->product_detail->sale_price,
-              $product->product_detail->promotion_price, $product->product_detail->promotion_start_date,
-              $product->product_detail->promotion_end_date) !!}
-            </div>
-            <div class="content-product">
-              <h3 class="title">{{ $product->name }}</h3>
-              <div class="start-vote">
-                {!! Helper::get_start_vote($product->rate) !!}
-              </div>
-              <div class="price">
-                {!! Helper::get_real_price($product->product_detail->sale_price,
-                $product->product_detail->promotion_price, $product->product_detail->promotion_start_date,
-                $product->product_detail->promotion_end_date) !!}
-              </div>
-            </div>
-          </a>
-        </div>
-        @endforeach
-      </div>
+      <h2 class="section-title">ĐIỆN THOẠI NỔI BẬT NHẤT</h2>
     </div>
   </section>
   <section class="section-products">
@@ -105,12 +79,12 @@
       <div class="row">
         @foreach($data['products'] as $key => $product)
         @if($key == 0)
-        <div class="col-md-2 col-md-40">
+        <div class="col-md-2 col-md-40" style="width: 250px;  margin-left: 25px;">
           <div class="item-product">
             <a href="{{ route('product_page', ['id' => $product->id]) }}" title="{{ $product->name }}">
               <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-6">
-                  <div class="image-product" style="background-image: url('{{ Helper::get_image_product_url($product->image) }}');padding-top: 100%;">
+                <div class="col-md-6 col-sm-6 col-xs-6" style="width: 250px; height: 350px">
+                  <div class="image-product" style="background-image: url('{{ Helper::get_image_product_url($product->image) }}');padding-top: 90%;background-size: auto 100%;background-repeat: no-repeat;  background-position: center;">
                     {!! Helper::get_promotion_percent($product->product_detail->sale_price,
                     $product->product_detail->promotion_price, $product->product_detail->promotion_start_date,
                     $product->product_detail->promotion_end_date) !!}
@@ -127,17 +101,16 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-6 col-sm-6 col-xs-6" style="display: flex;">
+                <div class="col-md-6 col-sm-6 col-xs-6 animate">
                   <div class="product-details">
-                    <p><strong><i class="fas fa-microchip"></i> Năng suất: </strong>{{ $product->productivity }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Điện áp: </strong>{{ $product->vol }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Công suất: </strong>{{ $product->wat }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Bạc đạn: </strong>{{ $product->bearings }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Tốc độ quay: </strong>{{ $product->speed }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Trọng lượng: </strong>{{ $product->weight }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Kích thước: </strong>{{ $product->size }}GB</p>
-                    <p><strong><i class="fas fa-microchip"></i> Model: </strong>{{ $product->model }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Bảo hành: </strong>{{ $product->insurance }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Màn Hình: </strong>{{ $product->productivity }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Hệ Điều Hành: </strong>{{ $product->vol }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Camera Sau, Trước: </strong>{{ $product->wat }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Chip: </strong>{{ $product->bearings }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>RAM: </strong>{{ $product->speed }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Bộ Nhớ Trong: </strong>{{ $product->weight }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>SIM: </strong>{{ $product->size }}GB</p>
+                    <p><strong><i class="fas fa-microchip"></i>Pin, Sạc: </strong>{{ $product->insurance }}</p>
                   </div>
                 </div>
               </div>
@@ -145,12 +118,12 @@
           </div>
         </div>
         @else
-        <div class="col-md-2 col-md-20">
+        <div class="col-md-2 col-md-40" style="width: 250px;  margin-left: 25px;">
           <div class="item-product">
             <a href="{{ route('product_page', ['id' => $product->id]) }}" title="{{ $product->name }}">
               <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                  <div class="image-product" style="background-image: url('{{ Helper::get_image_product_url($product->image) }}');padding-top: 100%;">
+                <div class="col-md-6 col-sm-6 col-xs-6" style="width: 250px; height: 350px">
+                  <div class="image-product" style="background-image: url('{{ Helper::get_image_product_url($product->image) }}');padding-top: 90%; background-size: auto 100%;background-repeat: no-repeat;  background-position: center;">
                     {!! Helper::get_promotion_percent($product->product_detail->sale_price,
                     $product->product_detail->promotion_price, $product->product_detail->promotion_start_date,
                     $product->product_detail->promotion_end_date) !!}
@@ -167,17 +140,16 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12 animate">
+                <div class="col-md-6 col-sm-6 col-xs-6 animate">
                   <div class="product-details">
-                  <p><strong><i class="fas fa-microchip"></i> Năng suất: </strong>{{ $product->productivity }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Điện áp: </strong>{{ $product->vol }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Công suất: </strong>{{ $product->wat }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Bạc đạn: </strong>{{ $product->bearings }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Tốc độ quay: </strong>{{ $product->speed }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Trọng lượng: </strong>{{ $product->weight }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Kích thước: </strong>{{ $product->size }}GB</p>
-                    <p><strong><i class="fas fa-microchip"></i> Model: </strong>{{ $product->model }}</p>
-                    <p><strong><i class="fas fa-microchip"></i> Bảo hành: </strong>{{ $product->insurance }}</p>
+                  <p><strong><i class="fas fa-microchip"></i>Màn Hình: </strong>{{ $product->productivity }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Hệ Điều Hành: </strong>{{ $product->vol }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Camera Sau, Trước: </strong>{{ $product->wat }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Chip: </strong>{{ $product->bearings }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>RAM: </strong>{{ $product->speed }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Bộ Nhớ Trong: </strong>{{ $product->weight }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>SIM: </strong>{{ $product->size }}GB</p>
+                    <p><strong><i class="fas fa-microchip"></i>Pin, Sạc: </strong>{{ $product->insurance }}</p>
                   </div>
                 </div>
               </div>
@@ -190,15 +162,16 @@
     </div>
   </section>
 </div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 @endsection
 
 
 
 @section('js')
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 <script>
   $(document).ready(function() {

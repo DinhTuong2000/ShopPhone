@@ -75,13 +75,13 @@ class LoginController extends Controller
             return redirect()->route('admin.dashboard')->with(['alert' => [
                 'type' => 'success',
                 'title' => 'Đăng nhập thành công',
-                'content' => 'Chào mừng bạn đến với trang quản trị Website Đại Châu'
+                'content' => 'Chào mừng bạn đến với trang quản trị Website Phone Store'
             ]]);
         } else {
             return redirect()->route('home_page')->with(['alert' => [
                 'type' => 'success',
                 'title' => 'Đăng nhập thành công',
-                'content' => 'Chào mừng bạn đến với Website Đại Châu của chúng tôi'
+                'content' => 'Chào mừng bạn đến với Website Phone Store của chúng tôi'
             ]]);
         }
     }

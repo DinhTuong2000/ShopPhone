@@ -28,7 +28,7 @@
             <div style="width: 30px; margin-right: 5px;">
               <img src="{{ asset('images/favicon.png') }}" alt="CTY INOX ĐẠI CHÂU SẢN XUẤT XE NƯỚC MÍA" style="width: 100%; height: auto; object-fit: cover;">
             </div>
-            <div style="color: #f33;">CTY INOX ĐẠI CHÂU SẢN XUẤT XE NƯỚC MÍA</div>
+            <div style="color: #f33;">CTY ĐIỆN THOẠI DI ĐỘNG IT</div>
           </div>
           <small class="pull-right">Date: {{ date("d/m/Y") }}</small>
         </h2>
@@ -42,10 +42,10 @@
           From: <br>
           <br>
           <address>
-            <b>CTY INOX ĐẠI CHÂU SẢN XUẤT XE NƯỚC MÍA</b><br>
-            Số điện thoại: 0979396926<br>
-            Email: chautattoo1995@gmail.com<br>
-            Địa chỉ: B12A/16 LIÊN ẤP 1-2, 3 Ấp 2, Vĩnh Lộc B, Bình Chánh, Thành phố Hồ Chí Minh
+            <b>CTY ĐIỆN THOẠI DI ĐỘNG IT</b><br>
+            Số điện thoại: 0326663040<br>
+            Email: dinhtuong@gmail.com<br>
+            Địa chỉ: Bình Chiểu, Thủ Đức, Thành phố Hồ Chí Minh
           </address>
         </div>
         <div class="col-md-3 col-sm-3 col-xs-3">
@@ -211,3 +211,4 @@
   });
 </script>
 @endsection
+
