@@ -154,7 +154,7 @@
                 <img src="{{ asset('images/support_online.jpg') }}">
                 <h3 class="sub_title">Để được hỗ trợ tốt nhất. Hãy gọi</h3>
                 <div class="phone">
-                  <a href="tel:0979396926" title="0979396926">0979396926</a>
+                  <a href="tel:0979396926" title="0979396926">0326663040</a>
                 </div>
                 <div class="or"><span>HOẶC</span></div>
                 <h3 class="title">Chat hỗ trợ trực tuyến</h3>
@@ -251,15 +251,17 @@
                 </div>
                 <div class="infomation-content">
                   <ul>
-                    <li><label>Năng suất:</label>{{ $data['product']->monitor ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Điện áp:</label>{{ $data['product']->vol ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Công suất:</label>{{ $data['product']->wat ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Trọng lượng:</label>{{ $data['product']->weight ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Kích thước:</label>{{ $data['product']->size ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Bạc đạn:</label>{{ $data['product']->bearings ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Tốc độ quay:</label>{{ $data['product']->speed ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Bảo hành:</label>{{ $data['product']->insurance ?: 'Đang Cập Nhật...' }}</li>
-                    <li><label>Model:</label>{{ $data['product']->model ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>Màn Hình: </label>{{ $data['product']->productivity ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>Hệ Điều Hành: </label>{{ $data['product']->vol ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>Camera Sau, Trước: </label>{{ $data['product']->wat ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>Chip: </label>{{ $data['product']->bearings ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>RAM: </label>{{ $data['product']->speed ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>Bộ Nhớ Trong: </label>{{ $data['product']->weight ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>SIM: </label>{{ $data['product']->size ?: 'Đang Cập Nhật...' }}</li>
+                    <li><label>Pin, Sạc: </label>{{ $data['product']->insurance ?: 'Đang Cập Nhật...' }}</li>
+                    
+
+                    
                   </ul>
                 </div>
                 <div class="more-infomation">

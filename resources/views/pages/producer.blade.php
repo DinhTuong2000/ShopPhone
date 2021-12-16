@@ -128,15 +128,14 @@
                 </div>
                 <div class="col-md-12 col-sm-12 col-xs-12 animate">
                   <div class="product-details">
-                    <p><strong><i class="fas fa-microchip"></i>Năng suất: </strong>{{ $product->productivity }}</p>
-                    <p><strong><i class="fas fa-microchip"></i>Điện áp: </strong>{{ $product->vol }}</p>
-                    <p><strong><i class="fas fa-microchip"></i>Công suất: </strong>{{ $product->wat }}</p>
-                    <p><strong><i class="fas fa-microchip"></i>Bạc đạn: </strong>{{ $product->bearings }}</p>
-                    <p><strong><i class="fas fa-microchip"></i>Tốc độ quay: </strong>{{ $product->speed }}</p>
-                    <p><strong><i class="fas fa-microchip"></i>Trọng lượng: </strong>{{ $product->weight }}</p>
-                    <p><strong><i class="fas fa-microchip"></i>Kích thước: </strong>{{ $product->size }}GB</p>
-                    <p><strong><i class="fab fa-microchip"></i>Model: </strong>{{ $product->model }}</p>
-                    <p><strong><i class="fas fa-microchip"></i>Bảo hành: </strong>{{ $product->insurance }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Màn Hình: </strong>{{ $product->productivity }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Hệ Điều Hành: </strong>{{ $product->vol }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Camera Sau, Trước: </strong>{{ $product->wat }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Chip: </strong>{{ $product->bearings }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>RAM: </strong>{{ $product->speed }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Bộ Nhớ Trong: </strong>{{ $product->weight }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>SIM: </strong>{{ $product->size }}</p>
+                    <p><strong><i class="fas fa-microchip"></i>Pin, Sạc: </strong>{{ $product->insurance }}</p>
                   </div>
                 </div>
               </div>

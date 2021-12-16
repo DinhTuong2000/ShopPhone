@@ -35,7 +35,8 @@
             <div class="note">
               <div class="note-icon"><i class="fas fa-info-circle"></i></div>
               <div class="note-content">
-                <i>Website <strong style="color: red;font-weight:bold;font-size: 24px">Phone Store</strong> thuộc <span style="font-weight: bolder;color: #256c20">công ty điện thoại di động IT</span> nhằm đưa sản phẩm tốt nhất đến tay người dúng.</i>
+                <i>Website <strong style="color: red;font-weight:bold;font-size: 24px">Phone Store</strong> thuộc <span style="font-weight: bolder;color: #256c20">công ty điện thoại di động IT</span> nhằm đưa sản phẩm tốt nhất đến tay người dùng.</i>
+                <i>Website uy tín bán hàng chính hảng hỗ trợ khách hàng 24/7  </i>
               </div>
             </div>
             <div class="content">
