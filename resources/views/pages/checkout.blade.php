@@ -1,3 +1,9 @@
+@extends('layouts.master')
+
+@section('title', 'Thanh Toán')
+
+@section('content')
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -57,7 +63,7 @@
       <div class="row">
         <div class="col-lg-8 col-md-7 col-sm-6 col-xs-12">
           <div class="col-header">
-            <h2><a href="{{ route('home_page') }}">{{ config('app.name') }}</a></h2>
+            <h2><a href="{{ route('home_page') }}">Đặt Hàng</a></h2>
           </div>
           <div class="row">
             <div class="col-lg-6 col-md-6">
@@ -189,3 +195,4 @@
     <script src="{{ asset('js/checkout.js') }}"></script>
 </body>
 </html>
+@endsection
