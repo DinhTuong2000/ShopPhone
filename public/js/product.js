@@ -22,19 +22,21 @@ $(document).ready(function(){
     },
     navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>']
   });
-  var height_description = $('#description').height();
+  var height_description = $('#description').height;
+  var height_description1 = parseFloat(height_description);
 
-  if(height_description > 768) {
+  if(height_description1 > 567) {
     $('#description').animate({
-      height: '768px',
+      height: '567px',
     }, 500);
     $('#description .loadmore').css('display', 'block');
   }
 
   $('#description .loadmore a').click(function() {
-    $('#description').animate({
-      height: height_description + 20 +'px',
-    }, 500);
+    if(height_description > 567) {
+      $('#description').animate({
+        height: height_description + 20,
+      }, 500);}
     $('#description .loadmore').css('display', 'none');
     $('#description .hidemore').css('display', 'block');
   });
